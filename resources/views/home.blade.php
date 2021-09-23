@@ -91,18 +91,19 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
 
                             <li class="scroll-to-section ">
-                                    @auth
+                                @auth
 
-                                    <a href="{{url('/showcart',Auth::user()->id)}}">
+                                    <a href="{{ url('/showcart', Auth::user()->id) }}">
                                         Cart{{ $count }}
 
                                     </a>
-                                    @endauth
+                                @endauth
 
-                                    @guest
-                                        Cart[0]
-                                    @endguest
-                                </a></li>
+                                @guest
+                                    Cart[0]
+                                @endguest
+                                </a>
+                            </li>
 
                             <li>
                                 @if (Route::has('login'))
@@ -123,7 +124,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                     </li>
                                 @endif
                             @endauth
-                </div>
+                          </div>
                 @endif
                 </li>
                 </ul>
@@ -197,7 +198,8 @@ https://templatemo.com/tm-558-klassy-cafe
                             framework. You can download and feel free to use this website template layout for your
                             restaurant business. You are allowed to use this template for commercial purposes.
                             <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload
-                            website. Please contact us for more information.</p>
+                            website. Please contact us for more information.
+                        </p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">

@@ -67,6 +67,17 @@ Route::get("/showcart/{id}", [HomeController::class, "showcart"]);
 Route::get("/remove/{id}", [HomeController::class, "remove"]);
 
 
+//
+Route::post("/orderconfirm", [HomeController::class, "orderconfirm"]);
+
+
+//order
+Route::get("/orders", [AdminController::class, "orders"]);
+
+
+//search
+Route::get("/search", [AdminController::class, "search"]);
+
 
 
 Route::get("/redirects", [HomeController::class, "redirects"]);
